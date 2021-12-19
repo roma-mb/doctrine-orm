@@ -1,0 +1,22 @@
+{
+    "require": {
+        "doctrine/orm": "^2.9",
+        "squizlabs/php_codesniffer": "^3.6",
+        "slevomat/coding-standard": "^7.0",
+        "symfony/cache": "^5.4",
+        "symfony/yaml": "^5.4",
+        "doctrine/migrations": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "DoctrineORM\\": "src/"
+        },
+        "files": [
+            "src/Helper/functions.php"
+        ]
+    },
+    "scripts": {
+        "cs": "phpcs -p src/ --standard=MyStandard/ruleset.xml --extensions=php",
+        "cs-fix": "phpcbf -p -s src/ --standard=MyStandard/ruleset.xml --extensions=php"
+    }
+}
